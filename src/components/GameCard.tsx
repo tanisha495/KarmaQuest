@@ -7,17 +7,20 @@ interface GameCardProps {
   className?: string;
   hover?: boolean;
   glow?: boolean;
+  onClick?: () => void;
 }
 
-const GameCard = ({ children, className, hover = true, glow = false }: GameCardProps) => {
+const GameCard = ({ children, className, hover = true, glow = false, onClick }: GameCardProps) => {
   return (
     <div
       className={cn(
         "game-card p-6",
         hover && "hover:shadow-xl hover:-translate-y-1 transition-all duration-300",
         glow && "glow-effect",
+        onClick && "cursor-pointer",
         className
       )}
+      onClick={onClick}
     >
       {children}
     </div>
