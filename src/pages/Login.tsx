@@ -9,12 +9,15 @@ import { Label } from '@/components/ui/label';
 import { Leaf, User } from 'lucide-react';
 
 const avatars = [
-  { id: 1, src: '/placeholder.svg', fallback: '🌱' },
-  { id: 2, src: '/placeholder.svg', fallback: '🌍' },
-  { id: 3, src: '/placeholder.svg', fallback: '🌳' },
+  { id: 1, src: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=100&h=100&fit=crop&crop=face', fallback: '🐱' },
+  { id: 2, src: 'https://images.unsplash.com/photo-1441057206919-63d19fac2369?w=100&h=100&fit=crop&crop=center', fallback: '🐧' },
+  { id: 3, src: 'https://images.unsplash.com/photo-1501286353178-1ec881214838?w=100&h=100&fit=crop&crop=face', fallback: '🐵' },
   { id: 4, src: '/placeholder.svg', fallback: '🐝' },
   { id: 5, src: '/placeholder.svg', fallback: '🦋' },
   { id: 6, src: '/placeholder.svg', fallback: '🌺' },
+  { id: 7, src: '/placeholder.svg', fallback: '🦊' },
+  { id: 8, src: '/placeholder.svg', fallback: '🐻' },
+  { id: 9, src: '/placeholder.svg', fallback: '🐨' },
 ];
 
 const Login = () => {
@@ -70,9 +73,9 @@ const Login = () => {
 
             <div>
               <Label className="text-lg font-bold text-gray-700 mb-4 block">
-                Pick your avatar! 🎭
+                Pick your cartoon avatar! 🎭
               </Label>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-3">
                 {avatars.map((avatar) => (
                   <div
                     key={avatar.id}
@@ -84,8 +87,8 @@ const Login = () => {
                     onClick={() => setSelectedAvatar(avatar.id)}
                   >
                     <Avatar className="w-16 h-16 mx-auto bounce-button">
-                      <AvatarImage src={avatar.src} />
-                      <AvatarFallback className="bg-gradient-to-r from-green-200 to-blue-200 text-2xl">
+                      <AvatarImage src={avatar.src} alt={`Avatar ${avatar.id}`} />
+                      <AvatarFallback className="bg-gradient-to-r from-green-200 to-blue-200 text-2xl border-2 border-white">
                         {avatar.fallback}
                       </AvatarFallback>
                     </Avatar>

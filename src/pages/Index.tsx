@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -26,12 +25,15 @@ const Index = () => {
   }
 
   const avatars = [
-    { id: 1, fallback: '🌱' },
-    { id: 2, fallback: '🌍' },
-    { id: 3, fallback: '🌳' },
-    { id: 4, fallback: '🐝' },
-    { id: 5, fallback: '🦋' },
-    { id: 6, fallback: '🌺' },
+    { id: 1, src: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?w=100&h=100&fit=crop&crop=face', fallback: '🐱' },
+    { id: 2, src: 'https://images.unsplash.com/photo-1441057206919-63d19fac2369?w=100&h=100&fit=crop&crop=center', fallback: '🐧' },
+    { id: 3, src: 'https://images.unsplash.com/photo-1501286353178-1ec881214838?w=100&h=100&fit=crop&crop=face', fallback: '🐵' },
+    { id: 4, src: '/placeholder.svg', fallback: '🐝' },
+    { id: 5, src: '/placeholder.svg', fallback: '🦋' },
+    { id: 6, src: '/placeholder.svg', fallback: '🌺' },
+    { id: 7, src: '/placeholder.svg', fallback: '🦊' },
+    { id: 8, src: '/placeholder.svg', fallback: '🐻' },
+    { id: 9, src: '/placeholder.svg', fallback: '🐨' },
   ];
 
   const currentAvatar = avatars.find(a => a.id === user.avatar) || avatars[0];
@@ -45,7 +47,7 @@ const Index = () => {
         <div className="max-w-4xl mx-auto">
           <div className="flex justify-center mb-6">
             <Avatar className="w-24 h-24 border-4 border-white shadow-lg float-animation">
-              <AvatarImage src="/placeholder.svg" />
+              <AvatarImage src={currentAvatar.src} alt="User avatar" />
               <AvatarFallback className="bg-gradient-to-r from-green-200 to-blue-200 text-4xl">
                 {currentAvatar.fallback}
               </AvatarFallback>
