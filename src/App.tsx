@@ -5,11 +5,13 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import Login from "./pages/Login";
 import Tracker from "./pages/Tracker";
 import Karma from "./pages/Karma";
 import Impact from "./pages/Impact";
 import Rewards from "./pages/Rewards";
 import NotFound from "./pages/NotFound";
+import ThemeToggle from "./components/ThemeToggle";
 
 const queryClient = new QueryClient();
 
@@ -19,7 +21,9 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ThemeToggle />
         <Routes>
+          <Route path="/login" element={<Login />} />
           <Route path="/" element={<Index />} />
           <Route path="/tracker" element={<Tracker />} />
           <Route path="/karma" element={<Karma />} />

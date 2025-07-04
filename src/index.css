@@ -45,6 +45,36 @@
     --game-purple: 262 83% 70%;
     --game-pink: 328 86% 70%;
   }
+
+  .dark {
+    --background: 120 10% 8%;
+    --foreground: 120 5% 90%;
+
+    --card: 120 10% 10%;
+    --card-foreground: 120 5% 90%;
+
+    --popover: 120 10% 10%;
+    --popover-foreground: 120 5% 90%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 120 10% 15%;
+    --secondary-foreground: 120 5% 90%;
+
+    --muted: 120 10% 15%;
+    --muted-foreground: 120 5% 60%;
+
+    --accent: 32 95% 70%;
+    --accent-foreground: 120 10% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 120 10% 15%;
+    --input: 120 10% 15%;
+    --ring: 142 76% 36%;
+  }
 }
 
 @layer components {
@@ -54,6 +84,10 @@
   
   .game-card {
     @apply bg-white/80 backdrop-blur-sm border-2 border-white/50 rounded-2xl shadow-lg;
+  }
+
+  .dark .game-card {
+    @apply bg-gray-800/80 border-gray-700/50;
   }
   
   .bounce-button {
