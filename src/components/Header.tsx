@@ -23,7 +23,7 @@ const Header = () => {
               <Leaf className="w-6 h-6 text-white" />
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-              KarmicLoop
+              KarmaQuest
             </span>
           </Link>
           

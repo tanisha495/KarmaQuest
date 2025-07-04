@@ -50,7 +50,7 @@ const Login = () => {
           </div>
           <h1 className="text-4xl font-bold text-white mb-2">Welcome to</h1>
           <h2 className="text-5xl font-bold bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-            KarmicLoop
+            KarmaQuest
           </h2>
           <p className="text-white/80 mt-2">Choose your eco-hero and start your green adventure!</p>
         </div>
